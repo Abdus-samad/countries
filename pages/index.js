@@ -4,33 +4,10 @@ import Body from "../components/Body";
 import Pagination from "../components/layout/Pagination";
 
 function Home({ posts, loading }) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(8);
-
-  const IndexOfLastPost = currentPage * postsPerPage;
-  const IndexOfFirstPost = IndexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(IndexOfFirstPost, IndexOfLastPost);
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // useEffect(() => {
-  //   setSearchInput("");
-  //   if (region !== "") {
-  //     let displayData = data.filter(
-  //       (item) => item.region.toLowerCase() === region
-  //     );
-  //     setDisplayData(displayData);
-  //   }
-  // }, [region, data]);
   return (
     <div>
       <Header />
-      <Body posts={currentPosts} loading={loading} />
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={posts.length}
-        paginate={paginate}
-      />
+      <Body posts={posts} loading={loading} />
     </div>
   );
 }

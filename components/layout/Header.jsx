@@ -7,10 +7,7 @@ function Header() {
       <div className="container">
         <div className="header__content">
           <h2 className="header__logo">Where in the World?</h2>
-          <div>
-            <BsMoonFill size={19} />
-            <p>Dark mode</p>
-          </div>
+          
         </div>
       </div>
     </div>

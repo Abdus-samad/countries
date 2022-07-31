@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ posts, loading }) => {
+const Card = ({ countries, loading }) => {
   return (
     <>
-      {posts.map((post) => {
+      {countries.map((post) => {
         const { name, flags, population, capital, region } = post;
         return (
           <Link
@@ -26,7 +26,7 @@ const Card = ({ posts, loading }) => {
 
               <div className="card__content">
                 <h3>{name?.official}</h3>
-                <p>Population: {population}</p>
+                <p>Population: {new Intl.NumberFormat().format(population)}</p>
                 <p> Region: {region}</p>
                 <p>Capital: {capital}</p>
               </div>

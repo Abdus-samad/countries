@@ -82,13 +82,14 @@ const Country = ({ data }) => {
               </div>
               <div className="text__content-3">
                 <span> Border Countries: </span>
-                {data[0].borders.map((item, index) => {
-                  return (
-                    <button key={index} className="borders">
-                      {item}
-                    </button>
-                  );
-                })}
+                {data[0].borders &&
+                  data[0].borders.map((item, index) => {
+                    return (
+                      <button key={index} className="borders">
+                        {item}
+                      </button>
+                    );
+                  })}
               </div>
             </div>
           </div>
