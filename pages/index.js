@@ -2,10 +2,14 @@ import { useState, useEffect } from "react";
 import Header from "../components/layout/Header";
 import Body from "../components/Body";
 import Pagination from "../components/layout/Pagination";
+import Head from "next/head";
 
 function Home({ posts, loading }) {
   return (
     <div>
+      <Head>
+        <title>Countries</title>
+      </Head>
       <Header />
       <Body posts={posts} loading={loading} />
     </div>
