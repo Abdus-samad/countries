@@ -1,6 +1,4 @@
 import React from "react";
-import { AiOutlineSearch } from "react-icons/ai";
-import DropDown from "./layout/Dropdown";
 import Card from "./layout/Card";
 
 const Body = ({ loading, posts }) => {
