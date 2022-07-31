@@ -51,11 +51,11 @@ a {
   justify-content: space-between;
   padding: 0 3rem;
   flex-direction: column;
-  
+
   margin-bottom: 2rem;
 }
 
-/* ontainerGrid  px-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 3xl:grid-cols-8 justify-items-center gap-16  z-30 */
+
 
 .home__grid {
   padding: 2rem 3.5rem;
@@ -133,8 +133,6 @@ a {
 }
 
 /*Card*/
-.area {
-}
 
 .card {
   background: #283b54;
@@ -151,7 +149,7 @@ a {
 
 .card__img > .img {
   width: 100%;
-  border-radius: 15px 5px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .card__content {

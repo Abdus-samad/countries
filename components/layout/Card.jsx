@@ -21,6 +21,7 @@ const Card = ({ countries, loading }) => {
                   src={flags?.png}
                   alt={flags?.svg}
                   className="img"
+                  style={{   borderRadius: "5px 5px 0 0"}}
                 />
               </div>
 

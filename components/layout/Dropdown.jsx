@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { AiFillCaretDown } from "react-icons/ai";
 
 const DropDown = ({searchByRegion}) => {
 
