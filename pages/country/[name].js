@@ -7,11 +7,19 @@ import Image from "next/image";
 import NumberFormat from "react-number-format";
 import Link from "next/link";
 
-const Country = ({ data }) => {
+const Country = ({ data, loading }) => {
   const router = useRouter();
   const goback = () => {
     router.push("/");
   };
+
+  if (loading) {
+    return (
+      <div className="spinner">
+        <img src={"/Preloader.gif"} alt="spinner" />
+      </div>
+    );
+  }
   return (
     <>
       <Header />
@@ -104,7 +112,7 @@ export async function getServerSideProps(context) {
     `https://restcountries.com/v3.1/name/${context.params.name}`
   );
   return {
-    props: { data: resp.data },
+    props: { data: resp.data, loading: false },
   };
 }
 

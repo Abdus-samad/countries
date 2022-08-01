@@ -3,6 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Card = ({ countries, loading }) => {
+  if (loading) {
+    return (
+      <div className="spinner">
+        <img src={'/Preloader.gif'}   alt="spinner"/>
+      </div>
+      
+
+    );
+  }
   return (
     <>
       {countries.map((post) => {
@@ -26,7 +35,7 @@ const Card = ({ countries, loading }) => {
               </div>
 
               <div className="card__content">
-                <h3>{name?.official}</h3>
+                <h3>{name?.common}</h3>
                 <p>Population: {new Intl.NumberFormat().format(population)}</p>
                 <p> Region: {region}</p>
                 <p>Capital: {capital}</p>
